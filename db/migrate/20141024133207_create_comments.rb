@@ -1,7 +1,7 @@
 class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
-    	t.references :post
+    	t.references :post, index: true
     	t.string :title
     	t.string :message, default: "", null: false
     	t.timestamps

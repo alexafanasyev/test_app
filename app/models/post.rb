@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   after_create :put_message, if: :one_of_the_first
   validates :title, length: {minimum: 2, maximum: 20}

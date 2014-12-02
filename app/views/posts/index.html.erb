@@ -5,18 +5,9 @@
 
   <li>
     <p> <%= link_to post.title, post_path(post) %> 
-          created by <%= post.user.try(:full_name) %> </p>
+            created by <%= post.user.try(:full_name) %> </p>
     <p> It has <%= pluralize(post.comments.count, "comment") %>  </p>
   </li>
-
-  <span>
-    <%= link_to 'Edit Post', edit_post_path(post) %> |
-  </span>
-
-  <span>
-    <%= link_to 'Delete Post', post_path(post),
-      method: :delete, data: {confirm: 'Are you sure?'} %>
-  </span>
 
   <% end %>
 </ul>
