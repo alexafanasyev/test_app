@@ -33,3 +33,12 @@
     padding: 10px;
 
    }
+#post_body {
+    width: 580px;
+    height: 100px;
+}
+
+#comment_message {
+    width: 280px;
+    height: 100px;
+}
